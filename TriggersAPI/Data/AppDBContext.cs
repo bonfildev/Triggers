@@ -11,6 +11,6 @@ namespace TriggersAPI.Data
         {
         }
 
-        public DbSet<Agenda> Cascades { get; set; }
+        public DbSet<Agenda> Agendas { get; set; }
     }
 }
