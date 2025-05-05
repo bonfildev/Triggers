@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using TriggersAPI.Models;
+using TriggersModels;
 
 namespace TriggersAPI.Data
 {

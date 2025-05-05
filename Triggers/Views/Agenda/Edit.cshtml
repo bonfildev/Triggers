@@ -1,0 +1,44 @@
+﻿@model TriggersModels.Agenda
+
+@{
+    ViewData["Title"] = "Edit Agenda";
+}
+
+<h2>Edit Agenda</h2>
+
+<form asp-action="Update" method="post">
+    @* Hidden ID field so it can be posted back *@
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Date"></label>
+        <input asp-for="Date" type="date" class="form-control" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+
+    <div class="form-group form-check">
+        <input asp-for="IsBooked" class="form-check-input" />
+        <label asp-for="IsBooked" class="form-check-label"></label>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cost"></label>
+        <input asp-for="Cost" type="number" step="0.01" class="form-control" />
+        <span asp-validation-for="Cost" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

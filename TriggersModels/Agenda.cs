@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TriggersAPI.Models
+namespace TriggersModels
 {
     public class Agenda
     {
